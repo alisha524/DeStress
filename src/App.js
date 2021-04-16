@@ -14,6 +14,7 @@ import Profile from "./components/Profile";
 import BoardUser from "./components/BoardUser";
 import BoardModerator from "./components/BoardModerator";
 import BoardAdmin from "./components/BoardAdmin";
+import Counsellors from "./components/Counsellors";
 
 const App = () => {
   const [showModeratorBoard, setShowModeratorBoard] = useState(false);
@@ -93,7 +94,7 @@ const App = () => {
               </Link>
             </li>
             <li className="nav-item">
-              <Link to={"/findresources"} className ="nav-link">Resources</Link>
+              <Link to={"/counselors"} className ="nav-link">Find Counselors</Link>
             </li>
             <li className="nav-item">
               <Link to={"/login"} className="nav-link">
@@ -119,8 +120,9 @@ const App = () => {
           <Route path="/user" component={BoardUser} />
           <Route path="/mod" component={BoardModerator} />
           <Route path="/admin" component={BoardAdmin} />
-          <Route path="/about" component = {About}/>
-          <Route path="/findresources" component={FindResources}/>
+          <Route exact path="/about" component = {About}/>
+          <Route exact path="/findresources" component={FindResources}/>
+          <Route exact path ="/counselors" component={Counsellors}/>
         </Switch>
       </div>
     </div>

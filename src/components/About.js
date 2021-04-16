@@ -4,7 +4,7 @@ import UserService from "../services/user.service";
 import "./styling/About.css";
 
 const About =() =>{
-    const [content, setContent] = useState("");
+  const [content, setContent] = useState("");
 
   useEffect(() => {
     UserService.getPublicContent().then(
@@ -22,13 +22,13 @@ const About =() =>{
     );
   }, []);
     return (
-        <div class="container-fluid">
-            <div class="header">
-                <p>In a society where stigma has destroyed all adventure, the only adventure left is to destroy that stigma.</p>
-                <p>An excerpt from TheMindClan</p>
-            </div>
-        </div>
-      );
+      <div class="container-fluid">
+          <div class="header">
+            <p>In a society where stigma has destroyed all adventure, the only adventure left is to destroy that stigma.</p>
+            <p>An excerpt from TheMindClan</p>
+          </div>
+      </div>
+    );
 }
 
 export default About;

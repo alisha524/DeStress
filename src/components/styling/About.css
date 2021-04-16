@@ -1,0 +1,8 @@
+.header {
+    grid-area: header;
+    background-color:#1f0247;
+    text-align: center;
+    font-size: 35px;
+    color: #ffffff;
+    width: 100%;
+  }
